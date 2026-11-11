@@ -1,55 +1,53 @@
-<p align="center">
-  <a href="https://laravel.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
-  </a>
-</p>
+<div align="center">
+<img src="assets/readme-cover.svg" alt="Legal Management System — Laravel and Vuexy" width="100%" />
 
-<h2 align="center">⚖️ Legal Management System</h2>
+# Legal Management System
+**إدارة المستندات والعقود والأعمال القانونية للشركات**
 
-<p align="center">
-  Laravel-based legal system to manage company documents, court cases, sessions, and appeals — powered by the Vuexy admin template.
-</p>
+[Developer profile](https://github.com/matef-hub) · [Related portfolio](https://github.com/matef-hub/atefdodo)
+</div>
 
----
+## Overview
 
-## 🚀 Features
+A **Laravel 12** legal operations workspace with a **Vuexy** administration interface. The verified web routes include authenticated modules for company documents and rental contracts, their listings, and PDF/DOCX exports. Additional models and court-work features may be under development; their existence in the repository does not guarantee complete end-to-end workflows.
 
-- 📂 **Company Document Management**
-  - Upload, edit, archive legal/company documents
-  - Expiry date alerts & dashboard summary
-  - AJAX-powered modals for CRUD
+## Work areas
 
-- 🏛️ **Court Case Tracking**
-  - Manage cases, court names, dates
-  - Assign cases to lawyers
-  - Appeal linking
+| Area | Repository scope |
+|:--|:--|
+| Company documents | Records, renewal dates, document uploads and expiry visibility |
+| Rental contracts | Contract records and associated documents |
+| Legal office workflows | Laravel controllers, validation, views and data models |
+| Export | PDF and DOCX endpoints in the authenticated web routes |
 
-- ⏱️ **Court Session Scheduling**
-  - Session dates, times, and statuses
-  - Integrated with court cases
+```mermaid
+flowchart LR
+    A["Authorized user"] --> B["Laravel application"]
+    B --> C["Document / contract records"]
+    C --> D["Review & renewal"]
+    C --> E["PDF / DOCX export"]
+```
 
-- 📑 **Appeals Management**
-  - Create & relate appeals to original cases
-  - Status tracking (won, lost, in progress)
+## Development setup
 
-- 🔐 **Secure Authentication**
-  - Email verification, password reset
-  - Role-based access (admin/lawyer/client)
-
-- 🎨 **Vuexy Admin Template Integration**
-  - Fully responsive UI
-  - DataTables, modals, toasts, and charts
-
----
-
-## 🛠️ Installation
+Requires PHP, Composer, Node.js, a supported database, and the legally licensed Vuexy dependencies used by the project.
 
 ```bash
-git clone https://github.com/atefdodo/Legal-management-666.git
-cd Legal-management-666
 composer install
+npm install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate --seed
-npm install && npm run dev
-php artisan storage:link
+php artisan migrate
+npm run build
+php artisan serve
+```
+
+Configure the database **privately** before migrations. For Windows PowerShell, use `Copy-Item .env.example .env` instead of `cp`. Seeding, storage linking and production configuration depend on local project requirements.
+
+## Data protection
+
+**Do not use example setup commands against a production database.** This code processes potentially sensitive legal and business information. Confirm authentication, authorization, upload validation, backups and audit logging before any deployment.
+
+A `.env` file appears in this repository's tracked root: review and rotate any real credentials and remove secrets from the full Git history before treating the repository as safe to share. Licensed commercial template assets are subject to their own terms.
+
+Maintained by [Mohamed Atef](https://github.com/matef-hub) — Egyptian lawyer and software developer.
