@@ -48,6 +48,6 @@ Configure the database **privately** before migrations. For Windows PowerShell, 
 
 **Do not use example setup commands against a production database.** This code processes potentially sensitive legal and business information. Confirm authentication, authorization, upload validation, backups and audit logging before any deployment.
 
-A `.env` file appears in this repository's tracked root: review and rotate any real credentials and remove secrets from the full Git history before treating the repository as safe to share. Licensed commercial template assets are subject to their own terms.
+A `.env` file was previously tracked and is no longer in the current tree; its content may remain accessible in Git history. Rotate any previously exposed credentials and keep server configuration outside the repository. Licensed commercial template assets are subject to their own terms.
 
 Maintained by [Mohamed Atef](https://github.com/matef-hub) — Egyptian lawyer and software developer.
