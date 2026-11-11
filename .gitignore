@@ -1,80 +1,48 @@
-<<<<<<< HEAD
-/.phpunit.cache
-/node_modules
-/public/build
+# Dependencies and build artifacts
+/vendor/
+/node_modules/
+/public/build/
 /public/hot
 /public/storage
 /storage/*.key
 /storage/pail
-/vendor
-
-# .env
-.env.backup
-.env.production
-.phpactor.json
+/.phpunit.cache
 .phpunit.result.cache
+.phpactor.json
 
-docker-compose.override.yml
-
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
+# Sensitive configuration, credentials and backups
+.env
+.env.*
+!.env.example
 /auth.json
+auth.json
+*.pem
+*.p12
+*.pfx
+*.keystore
+*.key
+
+# Local tools and editor files
 /.fleet
 /.idea
 /.nova
 /.vscode
 /.zed
+/.vagrant
+Homestead.json
+Homestead.yaml
+docker-compose.override.yml
+npm-debug.log
+yarn-error.log
 
+# Generated front-end build outputs
+/public/css
+/public/js
+/public/mix-manifest.json
+
+# Retain intended source assets (not generated output)
 !/public/assets
 !/public/assets/*
 /resources/assets/vendor/fonts/flags/**
 /resources/assets/vendor/fonts/fontawesome/**
-/public/css
-/public/js
-/public/mix-manifest.json
-# /public/assets/*
-# But not these files...
-# !/public/assets/json
-# /public/assets/json/*
-# !/public/assets/json/search-vertical.json
-# !/public/assets/json/search-horizontal.json
-
-/resources/assets/vendor/fonts/flags/**
-/resources/assets/vendor/fonts/fontawesome/**
-
-# Except for 'template-customizer.js' inside 'resources/assets/vendor/js/'
 !/resources/assets/vendor/js/template-customizer.js
-=======
-/vendor/
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
-
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
-
-storage/*.key
-.env
-Homestead.yaml
-Homestead.json
-/.vagrant
-.phpunit.result.cache
-
-/public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
->>>>>>> b6bda79594755ddbfc1b37bbeb4d3ffb3bf63031
